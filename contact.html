@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Pulse - Contact</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+  <header>
+    <h1>Contact</h1>
+    <p>Share your favorite powers, hero ideas, or suggestions for the site.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Power Guide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Send Feedback</h2>
+      <p>Use this form to leave a short message about which superpower theme you enjoyed most.</p>
+      <form id="feedbackForm" data-form-name="contact-feedback-form">
+        <div>
+          <label for="visitor">Visitor Name</label>
+          <input id="visitor" name="visitor" type="text" placeholder="Your name" required>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your feedback here" required></textarea>
+        </div>
+        <button type="submit">Send Feedback</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Extra Interaction</h2>
+      <p>Click the button below to reveal a short hero note.</p>
+      <p><button id="contactInfoBtn" type="button">Show Special Note</button></p>
+      <p id="officeHours" class="small"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Thanks for visiting this simple superpowers website.</p>
+  </footer>
+
+  <script src="analytics.js"></script>
+  <script>
+    document.getElementById('contactInfoBtn').addEventListener('click', function () {
+      document.getElementById('officeHours').textContent = 'Special note: Every power has strengths, weaknesses, and fun uses. With great power, comes great responsibility.';
+    });
+  </script>
+</body>
+</html>
