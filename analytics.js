@@ -1,3 +1,12 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YE3BDQSQRW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YE3BDQSQRW');
+</script>
 (function () {
   const startTime = Date.now();
   const pageName = document.body.dataset.page || document.title || 'unknown-page';
