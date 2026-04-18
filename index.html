@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Shoppe - Home</title>
+  <meta name="description" content="Three-page website themed around superpowers and hero abilities.">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <header>
+    <h1>Power Shoppe</h1>
+    <p>A guide to super strength, flight, invisibility, and other fun powers.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Power Guide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome</h2>
+      <p>The theme of the Power Shoppe focuses on exciting superpowers like speed, telekinesis, healing, and energy control. Each page includes text, navigation, and interactive elements so user activity can be tracked.</p>
+      <button id="learnMoreBtn" type="button">Reveal Power Note</button>
+      <p id="themeNote" class="small"></p>
+    </section>
+
+    <section>
+      <h2>Choose a Favorite Power</h2>
+      <p>Select the superpower you think would be the most useful.</p>
+      <form id="interestForm" data-form-name="home-power-form">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div>
+          <label for="interest">Favorite power</label>
+          <select id="interest" name="interest" required>
+            <option value="">Choose one</option>
+            <option>Shape Shifting</option>
+            <option>Enhanced Senses</option>
+            <option>Invisibility</option>
+            <option>Teleportation</option>
+          </select>
+        </div>
+        <button type="submit">Submit Choice</button>
+      </form>
+      <p class="small">This form submission is tracked with JavaScript and Google Analytics.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built as a simple GitHub Pages and analytics project.</p>
+  </footer>
+
+  <script src="analytics.js"></script>
+  <script>
+    document.getElementById('learnMoreBtn').addEventListener('click', function () {
+      document.getElementById('themeNote').textContent = 'The Power Shoppe explores fun hero abilities while tracking how visitors interact with each page.';
+    });
+  </script>
+</body>
+</html>
