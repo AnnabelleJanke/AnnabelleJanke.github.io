@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Power Shoppe - Power Guide</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="power-guide">
+  <header>
+    <h1>Power Guide</h1>
+    <p>This page includes the required table and a second form action.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Power Guide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Superpower Table</h2>
+      <p>The table below shows a few powers, their strengths, and where they might help most.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Power</th>
+            <th>Main Ability</th>
+            <th>Best Use</th>
+            <th>Hero Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shape Shifting</td>
+            <td>Turn into different forms</td>
+            <td>Fit into any scenario</td>
+            <td>9/10</td>
+          </tr>
+          <tr>
+            <td>Enhanced Senses</td>
+            <td>Great attention to detail</td>
+            <td>Witness what may go unnoticed</td>
+            <td>9/10</td>
+          </tr>
+          <tr>
+            <td>Invisibility</td>
+            <td>Stay unseen</td>
+            <td>Stealth Missions</td>
+            <td>7/10</td>
+          </tr>
+          <tr>
+            <td>Teleportation</td>
+            <td>Instant travel through alternate dimensions</td>
+            <td>Freedom of movement</td>
+            <td>8/10</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="downloadScheduleBtn" type="button">Save Power Pick</button>
+    </section>
+
+    <section>
+      <h2>Pick the Next Featured Power</h2>
+      <p>Select one ability you would want this website to highlight next.</p>
+      <form id="rsvpForm" data-form-name="power-guide-form">
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        </div>
+        <div>
+          <label for="eventChoice">What should be added?</label>
+          <select id="eventChoice" name="eventChoice" required>
+            <option value="">Choose one</option>
+            <option>Mind Reading</option>
+            <option>Healing</option>
+            <option>Energy Blasts</option>
+            <option>Time Control</option>
+          </select>
+        </div>
+        <button type="submit">Send Selection</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Table views, button clicks, and form submissions are all trackable on this page.</p>
+  </footer>
+
+  <script src="analytics.js"></script>
+  <script>
+    document.getElementById('downloadScheduleBtn').addEventListener('click', function () {
+      alert('Your power pick was saved as a tracked button click.');
+    });
+  </script>
+</body>
+</html>
